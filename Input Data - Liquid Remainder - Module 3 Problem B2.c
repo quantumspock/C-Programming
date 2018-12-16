@@ -3,7 +3,7 @@
 //Problem B2
 
 #include <stdio.h>
-void liquid(int, int*, int*, int*, int*);              //prototype of function volume()
+void liquid(int, int*, int*, int*, int*);              //prototype of function liquid()
 int main()
 {
   int gallon = 0, quart = 0, pint = 0, cup = 0;       //declarations
@@ -29,4 +29,5 @@ void liquid(int x, int *gallon, int *quart, int *pint, int *cup)
     *pint = ((x - *gallon*16 - *quart*4)/2);
     *cup = (x - *gallon*16 - *quart*4 - *pint*2);
 
+return;
 }
