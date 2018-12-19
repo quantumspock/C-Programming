@@ -1,32 +1,26 @@
 //Kristi Adams
 //Module Three
-//Problem B2
+//Problem A1
 
 #include <stdio.h>
-void liquid(int, int*, int*, int*, int*);                    //prototype of function volume()
+
 int main()
 {
-  int gallon = 0, quart = 0, pint = 0, cup = 0;               //declarations
-    int x;
+  #define TABLESIZE 10              //set table size
+  int n;
 
-printf("Enter the number of cups: ");                  //Allow user input for number of cups
-    scanf("%d", &x );
+  printf("NUMBER  SQUARE\n");       //table headings
+  printf("______  ______\n\n");     //underline for headings
+  n=1;
+  while (n <= TABLESIZE)
+  {
+      printf("%3d %7d\n", n, n*n);  //calculate to square
 
-  liquid(x, &gallon, &quart, &pint, &cup);                 //Calls function
+      n++;                          //add one to n
+  }
 
-printf("\nThe number of gallons is: %d", gallon);      //Prints results from function liquid
-printf("\nThe number of quarts is: %d", quart);
-printf("\nThe number of pints is: %d", pint);
-printf("\nThe number of cups is: %d", cup);
 
-return 0;
+  }
 
-}
-void liquid(int x, int *gallon, int *quart, int *pint, int *cup)
-{
-    *gallon = x/16;
-    *quart = ((x - *gallon*16)/4);
-    *pint = ((x - *gallon*16 - *quart*4)/2);
-    *cup = (x - *gallon*16 - *quart*4 - *pint*2);
 
-}
+
